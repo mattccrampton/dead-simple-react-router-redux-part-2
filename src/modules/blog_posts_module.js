@@ -25,7 +25,11 @@ export const FETCH_BLOGPOST_ERROR = 'blog_posts/FETCH_BLOGPOST_ERROR'
 // http://redux.js.org/docs/basics/Actions.html#action-creators
 export const blogPostFetch = () => {
 
+    console.log("blogPostFetch called");
+
     return dispatch => {
+
+        console.log("blogPostFetch start");
         
         dispatch({
             type: FETCH_BLOGPOST_REQUESTED
@@ -34,6 +38,7 @@ export const blogPostFetch = () => {
         return axios.get(`https://jsonplaceholder.typicode.com/posts`)
             
             .then((response) => {
+                console.log("blogPostFetch success:", response.data);
                 dispatch({
                     type: FETCH_BLOGPOST_SUCCESS,
                     payload: response.data
@@ -41,6 +46,7 @@ export const blogPostFetch = () => {
             })
             
             .catch((error) => {
+                console.log("blogPostFetch error:", error);
                 dispatch({
                     type: FETCH_BLOGPOST_ERROR,
                     payload: error

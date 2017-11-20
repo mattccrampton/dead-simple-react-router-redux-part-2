@@ -9,11 +9,12 @@ import { Link } from 'react-router-dom'
 const Homepage = () => (
     <div>
         
+        <p>
+            Homepage | <Link to="/blog_posts">Blog Posts (requires login)</Link> | <Link to="/login">Login</Link>
+        </p>
+
         <h2>This is the Homepage</h2>
         
-        <p>
-            Go to the <Link to="/blog_posts">Blog Posts</Link> page
-        </p>
         
         <p>
             (There is no dynamic content on this page)

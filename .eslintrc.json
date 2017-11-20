@@ -1,0 +1,70 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": ["eslint:all", "plugin:react/all"],
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "babel"
+    ],
+    "globals": {
+        "_": false,
+        "process": false
+    },
+    "rules": {
+        "object-curly-spacing": ["error", "always"],
+        "prefer-destructuring": "off",
+        "arrow-body-style": "off",
+        "no-process-env": "off",
+        "sort-imports": "off",
+        "capitalized-comments": "off",
+        "multiline-comment-style": "off",
+        "max-len": "off",
+        "object-curly-newline": "off",
+        "quote-props": "off",
+        "sort-keys": "off",
+        "id-length": "off",
+        "no-plusplus": "off",
+        "function-paren-newline": "off",
+        "quotes": "off",
+        "camelcase": "off",
+        "one-var": "off",
+        "dot-location": "off",
+        "line-comment-position": "off",
+        "no-inline-comments": "off",
+        "no-extra-parens": "off",
+        "react/require-optimization": "off",
+        "react/prop-types": "off",
+        "react/destructuring-assignment": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-no-literals": "off",
+        "react/jsx-sort-props": "off",
+        "react/jsx-max-props-per-line": "off",
+        "react/jsx-first-prop-new-line": "off",
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ]
+    }
+}
